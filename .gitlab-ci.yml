@@ -1,7 +1,17 @@
 stages:
-  - build
-build:config:
-  stage: build
-  script:
-    - echo "hello"
+  - install
+  - test
+  - fail
 
+npm_inst:
+  stage: install
+  script: echo 'I think therefore I am'
+
+run_tests:
+  stage: test
+  image: golang
+  script:
+    - go env
+    - export
+    - pwd
+    - ls -la
