@@ -1,0 +1,7 @@
+stages:
+  - build
+build:config:
+  stage: build
+  script:
+    - echo "hello"
+
